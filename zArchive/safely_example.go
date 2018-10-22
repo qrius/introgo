@@ -1,19 +1,20 @@
 package main
 
 import (
-	"github.com/qrius/introgo/safely"
 	"errors"
 	"time"
+
+	"github.com/qrius/introgo/safely"
 )
 
-func message () {
+func message() {
 	println("Inside goroutine")
 	panic(errors.New("Oops!"))
 
 }
 
-func main (){
-	safely.go(message)
+func main() {
+	safely.Go(message)
 	println("outside goroutine")
-	time.sleep(1000)
+	time.Sleep(1000)
 }
