@@ -3,9 +3,13 @@ package main
 import "fmt"
 
 func swap(xPtr *int, yPtr *int) {
-	c := yPtr
-	yPtr = xPtr
-	xPtr = c
+	println("parameter y:", yPtr)
+	println("address of yPtr: ", &yPtr)
+	println("content of *yPtr: ", *yPtr)
+	//set c to the content at the address dereferenced by *yPtr
+	c := *yPtr
+	*yPtr = *xPtr
+	*xPtr = c
 }
 
 func main() {
@@ -13,6 +17,7 @@ func main() {
 	y := 2
 	fmt.Println("x = ", x)
 	fmt.Println("y = ", y)
+	println("address of y: ", &y)
 
 	swap(&x, &y)
 
