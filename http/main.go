@@ -1,9 +1,10 @@
 package main
 
 import (
+	"io"
 	"fmt"
 	"net/http"
-	"os"
+	"os(os.Stdout, resp.Body)(os.Stdout, resp.Body)"
 )
 
 func main() {
@@ -13,5 +14,5 @@ func main() {
 		os.Exit(1)
 	}
 
-	fmt.Println(resp)
+	io.Copy(os.Stdout, resp.Body)	
 }
