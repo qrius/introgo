@@ -19,13 +19,13 @@ type triangle struct {
 }
 
 func main() {
-	s := square{}
-	s.sideLength = 5
+	s := square{sideLength: 5}
+	// s.sideLength = 5
 	s.name = "square"
 
-	t := triangle{}
-	t.base = 2
-	t.height = 3
+	t := triangle{base: 2, height: 3}
+	// t.base = 2
+	// t.height = 3
 	t.name = "triangle"
 
 	printArea(s)
