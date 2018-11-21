@@ -1,16 +1,29 @@
 //Package twofer is a simple exercise in switch/case statement and string building
 package twofer
 
-// ShareWith should have a comment documenting it.
+import (
+	"fmt"
+)
+
+// ShareWith function returns a simple count for sharing scheme
 func ShareWith(name string) string {
+	var v string
+	// var b bytes.Buffer
+
 	l := len(name)
 
 	switch {
 	case l == 0:
-		return ("One for you, one for me.")
+		v = "you"
 	case l > 0:
-		return ("One for " + name + ", one for me.")
+		v = name
 	default:
-		return ("string not recognible")
+		v = "string not recognizable"
 	}
+
+	// b.WriteString("One for ")
+	// b.WriteString(v)
+	// b.WriteString(", one for me.")
+	// return (b.String())
+	return (fmt.Sprintf("%s%s%s", "One for ", v, ", one for me."))
 }
