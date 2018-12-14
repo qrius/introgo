@@ -23,8 +23,6 @@ func Proverb(rhyme []string) []string {
 	s := make([]string, 0)
 	//case of 0 input
 	if len(rhyme) == 0 {
-		// s := make([]string, 0)
-		// s = append(s, "")
 		return rhyme
 	}
 
