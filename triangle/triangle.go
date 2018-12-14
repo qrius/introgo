@@ -30,7 +30,7 @@ func KindFromSides(a, b, c float64) Kind {
 			k = Sca
 		}
 	}
-
+	// we're stuck on the issue of triangle inequality, 2a == b + c.  this "proof" doesn't make sense since triangle (6, 4, 5) surely is a triangle.
 	if (a <= 0) || (b <= 0) || (c <= 0) || !(a+b == c) || !(b+c == a) || !(a+c == b) {
 		k = NaT
 	}
