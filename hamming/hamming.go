@@ -12,8 +12,8 @@ func Distance(a, b string) (int, error) {
 		return 0, errors.New("uneven inputs")
 	}
 
-	count := 0
-	for i := 0; i < len(a); i++ {
+	var count int 
+	for i := range a {
 		if a[i] != b[i] {
 			count++
 		}
